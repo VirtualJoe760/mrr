@@ -1,0 +1,417 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Raleway:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap');
+/* Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+/* Global */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-link, .navbar-brand {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    
+}
+
+p, a, li, span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 0;
+}
+
+.white-hr {
+    border: none;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 10px 0;
+}
+
+/* Fonts */
+
+.rb-text-light {
+    font-weight: 300;
+}
+
+.rb-text-regular {
+    font-weight: 400;
+}
+
+.rb-text-heavy {
+    font-weight: 600;
+}
+
+
+/* Colors */
+
+:root {
+    --primary: #fdfdfd;
+    --secondary: rgb(147, 224, 255);
+    --calm: rgb(255, 255, 175);
+    --night: rgb(46, 32, 79);
+    --grey: rgb(182, 182, 182);
+    --black: rgb(0, 0, 0);
+    --nightGrad: linear-gradient(300deg, var(--calm) -30%, var(--night) 100%);
+    --calmGrad: linear-gradient(210deg, var(--calm) -30%, var(--secondary) 100%);
+}
+
+.rb-bgc-gradient-top {
+    background: linear-gradient(300deg, var(--calm) -30%, var(--night) 100%);
+}
+
+.rb-bgc-gradient-middle {
+    background: linear-gradient(210deg, var(--calm) -30%, var(--night) 100%);
+}
+
+.rb-color-primary {
+    color: #fdfdfd;
+}
+
+.rb-bgc-primary {
+    background-color: #fdfdfd;
+}
+
+.rb-color-secondary {
+    color: rgb(147, 224, 255)
+}
+
+.rb-bgc-secondary {
+    background-color: rgb(147, 224, 255)
+}
+
+.rb-color-calm {
+    color: rgb(255, 255, 175)
+}
+
+.rb-bgc-calm {
+    background-color: rgb(255, 255, 175)
+}
+
+.rb-color-night {
+    color: rgb(46, 32, 79)
+}
+
+.rb-bgc-night {
+    background-color: rgb(46, 32, 79)
+}
+
+.rb-color-grey {
+    color: rgb(182, 182, 182)
+}
+
+.rb-bgc-grey {
+    background-color: rgb(182, 182, 182)
+}
+
+.rb-color-black {
+    color: rgb(0, 0, 0)
+}
+
+.rb-bgc-black {
+    background-color: rgb(0, 0, 0)
+}
+
+
+/* buttons */
+
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow: 5px 5px var(--grey);
+}
+
+.btn-outline-primary {
+    color: var(--black);
+    background-color: var(--calm);
+    border-color: var(--primary);
+}
+.btn-outline-primary:hover {
+    color: var(--calm);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+.btn-outline-night {
+    color: var(--primary);
+    background-color: var(--night);
+    border-color: var(--primary);
+}
+
+.btn-outline-night:hover {
+    color: var(--black);
+    background-color: transparent;
+    border-color: var(--black);
+}
+
+.btn.btn-outline-search {
+    color: var(--calm);
+    background-color: var(--secondary);
+    border-color: var(--calm);
+    padding: 0.25rem 0.75rem;
+
+}
+
+
+.navbar-collapse {
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Navbar */
+
+.navbar-collapse {
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.home-header {
+    height: 1440px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
+.nav-link:active {
+    color: var(--calm)
+}
+
+.navbar-brand.myNav-brand {
+    color: #fdfdfd
+}
+
+.navbar-brand.myNav-brand:hover {
+    color: rgb(255, 255, 175);
+    --bs-navbar-brand-hover-color: rgb(255, 255, 175);
+}
+
+
+.nav-link {
+    color: #fdfdfd;
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 175);
+}
+
+
+/* NAVBAR... TOGGLER TUTORIAL https://www.youtube.com/watch?v=_MrShB9fh7U&ab_channel=ADesignerWhoCodes */
+
+
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+  }
+  
+  
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+    margin-right: 1rem;
+  }
+  
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary);
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .middle-bar {
+    margin-top: 0px;
+  }
+  
+  /* when nav is clicked to*/
+  
+  .navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+  }
+  
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  .navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+  }
+  
+  /* State when navbar is collapsed */
+  
+  .navbar-toggler.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+  }
+  
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  
+  .navbar-toggler.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+  }
+
+/* Header */
+
+
+.header-cta  {
+    margin-top: 30rem;
+    filter: drop-shadow(1rem -1.73rem 3rem var(--night));
+    
+}
+
+.header-register {
+    margin-top: 15rem;
+    filter: drop-shadow(1rem -1.73rem 4rem var(--calm));
+    
+}
+
+/* We-help */
+
+.concerning {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.we-help-section {
+    background: var(--night);
+}
+
+.how-we-help {
+    
+}
+
+.we-help {
+    height: 1200px;
+}
+
+.icon {
+    font-size: 70px;
+
+}
+
+.icon-section {
+    margin-top: 7.5rem;
+
+}
+
+/* Join Program */
+
+.application-heading {
+    text-align: center;
+}
+
+.form-label {
+    padding-top: 5px;
+}
+
+.upload-container {
+    padding-top: 10px;
+}
+
+.apply {
+    background-color: var(--secondary);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.applied {
+    padding: 4rem;
+}
+
+.applied: p {
+    text-align: left;
+}
+
+.submit-mobile {
+    visibility: hidden;
+}
+
+.submit-desktop {
+    visibility: visible;
+}
+
+
+.social {
+    background-color: var(--grey);
+    height: 100px;
+}
+
+/* Article Page */
+
+.blog-article {
+    background-color: var(--nightGrad);
+}
+
+
+/*footer*/
+.footer-container {
+    background-color: var(--night);
+}
+
+
+
+/* Media Queries */
+
+
+@media (max-width: 768px) {
+    .home-header {
+        height: 800px;
+    }
+    .header-cta {
+        margin-top: 5rem;
+        filter: none;
+    }
+    .header-register {
+        margin-top: 8rem;
+        filter: none;
+    }
+    .submit-mobile {
+        visibility: visible;
+    }
+    .submit-lg {
+        visibility: hidden;
+    }
+    
+}

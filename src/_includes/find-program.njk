@@ -1,0 +1,77 @@
+<section id="apply" class="apply">
+    <div class="container">
+        <div class="application-heading">
+            <h2 class="rb-text-heavy rb-color-primary">Join our program</h2>
+            <hr class="white-hr mb-4">
+        </div>
+        <div class="container join-program">
+            <!-- Updated the form tag below -->
+            <form class="application" onSubmit="handleFormSubmit()" action="https://formspree.io/f/xvojvgbo"
+                method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="firstName" class="form-label rb-color-primary rb-text-light">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Joe"
+                            aria-label="First name" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="lastName" class="form-label rb-color-primary rb-text-light">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Smith"
+                            aria-label="Last Name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="email" class="form-label rb-color-primary rb-text-light">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="Johnsmith@gmail.com" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="phone" class="form-label rb-color-primary rb-text-light">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="555-892-6893"
+                            required>
+                    </div>
+                </div>
+                <div class="col-12 mb-6">
+                    <label for="insProvider" class="form-label rb-color-primary rb-text-light">Insurance Provider</label>
+                    <input type="text" class="form-control" id="insProvider" name="insProvider"
+                        placeholder="Blue Cross/Blue Shield" required>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="idNumber" class="form-label rb-color-primary rb-text-light">ID Number</label>
+                        <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="xED9999999"
+                            required>
+                    </div>
+                    <div class="col-6">
+                        <label for="groupNumber" class="form-label rb-color-primary rb-text-light">Group number</label>
+                        <input type="text" class="form-control" id="groupNumber" name="groupNumber"
+                            placeholder="X0001001" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9 upload-container rb-color-primary rb-text-light">
+                        <label class="form-label" for="front-upload rb-color-primary rb-text-light">Upload Front of Insurance Card:</label>
+                        <input class="upload-input" accept="image/png, image/jpeg" type="file" id="front-upload"
+                            name="front-upload" required><br>
+                        <label class="form-label" for="back-upload rb-color-primary rb-text-light">Upload Back of Insurance Card:</label>
+                        <input class="upload-input" type="file" accept="image/png, image/jpeg id=" back-upload"
+                            name="back-upload" required><br>
+                        <input type="hidden" name="_next" value="www.myrecoveryroads.com" />
+                        <input type="checkbox" name="_optin" class="opt-in" required />
+                        <label for="" class="form-label rb-color-primary rb-text-light">You Agree to email communication.</label>
+                        <input type="hidden" name="tags" value="Applied" />
+
+                        <button type="submit" id="submit-button" class="btn btn-outline-primary submit-mobile me-sm-3 mt-5 mb-1">Submit</button>
+
+                    </div>
+                    <div class="col-3 justify-content-end text-end">
+                        <!-- Add a submit button to submit the form -->
+                        <button type="submit" id="submit-button" class="btn btn-outline-primary submit-lg me-sm-3 my-5">Submit</button>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+</section>
